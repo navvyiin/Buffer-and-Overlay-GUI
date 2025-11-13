@@ -15,7 +15,7 @@ Results are downloadable as shapefiles for further GIS processing.
 ### Usage
 1. Install packages from `requirements.txt`  
 2. Run with:  
-   `streamlit run app.py`  
+   `streamlit run streamlit_buffer_overlay_app.py`  
 3. Follow the interface to upload data, set parameters, and download results
 
 ### Requirements
@@ -27,4 +27,4 @@ Results are downloadable as shapefiles for further GIS processing.
 - Environmental impact studies  
 - Land parcel analysis
 
-For more details, see code and comments in `app.py`.
+For more details, see code and comments in `streamlit_buffer_overlay_app.py`.
