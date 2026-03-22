@@ -1,99 +1,55 @@
-# 🗺️ Buffer & Overlay GUI
+# Buffer & Overlay GUI
 
-**Buffer & Overlay GUI** is an interactive **Streamlit-based GIS application** for performing **buffer zone and overlay analysis** on road and parcel data.
-It allows users to upload spatial datasets or fetch roads from **OpenStreetMap**, visualize spatial intersections on an interactive map, and download analysis results for further GIS processing.
-
----
-
-## ✨ Key Features
-
-* 📂 Upload **parcel and road data** (Shapefile ZIP or GeoJSON)
-* 🌍 Fetch road networks directly from **OpenStreetMap (OSM)**
-* 📏 Create and compare **multiple buffer distances**
-* 🔄 Perform **overlay / intersection analysis**
-* 🗺️ Visualize results on an **interactive Folium map**
-* 📥 Download **buffer zones and intersecting parcels** as Shapefile ZIPs
+An interactive GIS application for buffer zone and overlay analysis, built with Streamlit. Upload your spatial data or pull road networks directly from OpenStreetMap, run the analysis, and explore results on a live map.
 
 ---
 
-## 🖥️ Demo Workflow
+## What It Does
 
-1. Upload parcel data and road data *or* fetch roads via OSM
-2. Select one or more buffer distances
-3. Run buffer and overlay analysis
-4. Explore results on an interactive map
-5. Download processed layers for use in GIS software (QGIS, ArcGIS)
+- Upload parcel and road data (Shapefile ZIP or GeoJSON), or fetch roads from OpenStreetMap
+- Select one or more buffer distances and run buffer zone analysis
+- Detect and visualise intersecting parcels on an interactive map
+- Download results as Shapefile ZIPs for use in QGIS or ArcGIS
 
 ---
 
-## 📦 Installation
+## Who It Is For
 
-### Prerequisites
+Urban planners, environmental analysts, land use researchers, and anyone who needs quick spatial proximity analysis without writing GIS code from scratch.
 
-* **Python 3.8+**
-* pip or virtual environment recommended
+---
 
-### Setup
+## Getting Started
+
+**Requirements:** Python 3.8 or above
 
 ```bash
 git clone https://github.com/navvyiin/Buffer-and-Overlay-GUI.git
 cd Buffer-and-Overlay-GUI
 pip install -r requirements.txt
-```
-
----
-
-## ▶️ Usage
-
-Start the Streamlit application:
-
-```bash
 streamlit run streamlit_buffer_overlay_app.py
 ```
 
-Then:
-
-* Use the sidebar to upload data or fetch OSM roads
-* Configure buffer distances
-* Run the analysis and download results
+Then open the app in your browser, upload your data from the sidebar, set your buffer distances, and run the analysis.
 
 ---
 
-## 🧰 Supported Data Formats
+## Supported Formats
 
-* **Input**
-
-  * Shapefile (`.zip`)
-  * GeoJSON (`.geojson`)
-* **Output**
-
-  * Shapefile ZIP (buffer layers & intersecting parcels)
+| Input | Output |
+|-------|--------|
+| Shapefile (`.zip`) | Shapefile ZIP (buffer layers) |
+| GeoJSON (`.geojson`) | Shapefile ZIP (intersecting parcels) |
 
 ---
 
-## 🧠 Applications
+## Tech Stack
 
-This tool is useful for:
-
-* 🏙️ Urban and regional planning
-* 🌱 Environmental impact analysis
-* 🏡 Land parcel and zoning analysis
-* 🛣️ Infrastructure proximity studies
-* 📊 Rapid GIS prototyping and teaching
+`Streamlit` `GeoPandas` `OSMnx` `Folium` `streamlit-folium`
 
 ---
 
-## ⚙️ Technologies Used
-
-* **Streamlit** – Web UI
-* **GeoPandas** – Spatial processing
-* **OSMnx** – OpenStreetMap road data
-* **Folium** – Interactive maps
-* **streamlit-folium** – Streamlit–Folium integration
-
----
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 Buffer-and-Overlay-GUI/
@@ -105,32 +61,23 @@ Buffer-and-Overlay-GUI/
 
 ---
 
-## ⚠️ Notes & Limitations
+## Notes
 
-* Performance depends on dataset size
-* Large buffers or dense road networks may take longer to process
-* Recommended for exploratory and lightweight GIS workflows
-
----
-
-## 🛠️ Future Improvements (Planned)
-
-* ⏱️ Performance optimization for large datasets
-* 📍 Spatial indexing support
-* 🎨 Improved UI layout and theming
-* 📤 Export to GeoJSON and CSV
-* 🧪 Automated tests
+- Processing time scales with dataset size and buffer complexity
+- Best suited for exploratory and lightweight GIS workflows
+- Large road networks or very wide buffer distances may take a moment to process
 
 ---
 
-## 📄 License
+## Planned Improvements
 
-MIT License
-© 2026 navvyiin
+- Spatial indexing for faster processing on large datasets
+- GeoJSON and CSV export options
+- Improved UI layout
+- Automated tests
 
 ---
 
-## 🤝 Contributing
+## License
 
-Contributions are welcome!
-Feel free to open an issue or submit a pull request with improvements, fixes, or feature ideas.
+MIT License. © 2026 navvyiin
